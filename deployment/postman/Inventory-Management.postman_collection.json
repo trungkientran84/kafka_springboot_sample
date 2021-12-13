@@ -1,0 +1,1133 @@
+{
+	"info": {
+		"_postman_id": "695747e6-5288-4a41-8194-9d7b72005352",
+		"name": "Inventory-Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cashier",
+			"item": [
+				{
+					"name": "Get All Cashier",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/ims/v1/cashiers?size=2&page=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"ims",
+								"v1",
+								"cashiers"
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "2"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add a Cashier",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Cashier 1\",\n    \"storeId\": \"adfadf\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/api/ims/v1/cashiers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"ims",
+								"v1",
+								"cashiers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a cashier",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Cashier 12 -edit\",\n    \"storeId\": \"619060114c1dd84209d74a0a\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/api/ims/v1/cashiers/619036f7fa75924dfdd7d059",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"ims",
+								"v1",
+								"cashiers",
+								"619036f7fa75924dfdd7d059"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FInd Cashier By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/ims/v1/cashiers/6190251b7d36d6078d542dbd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"ims",
+								"v1",
+								"cashiers",
+								"6190251b7d36d6078d542dbd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete A Cashier",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/ims/v1/cashiers/6190251b7d36d6078d542dbd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"ims",
+								"v1",
+								"cashiers",
+								"6190251b7d36d6078d542dbd"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Store",
+			"item": [
+				{
+					"name": "Get All Stores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/ims/v1/stores?size=2&page=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"ims",
+								"v1",
+								"stores"
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "2"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add a Store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Store 03\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/api/ims/v1/stores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"ims",
+								"v1",
+								"stores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a store",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Store 1 -edit\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/api/ims/v1/stores/619060444c1dd84209d74a0d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"ims",
+								"v1",
+								"stores",
+								"619060444c1dd84209d74a0d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FInd store By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/ims/v1/stores/6190601b4c1dd84209d74a0c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"ims",
+								"v1",
+								"stores",
+								"6190601b4c1dd84209d74a0c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete A Store",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/ims/v1/stores/6190601b4c1dd84209d74a0c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"ims",
+								"v1",
+								"stores",
+								"6190601b4c1dd84209d74a0c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Get All Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/ims/v1/products?size=10&page=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"ims",
+								"v1",
+								"products"
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add a Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Product 6\",\n  \"upc\": \"0000000000016\",\n  \"price\": 1560,\n  \"inventoryThreshold\": 50\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/api/ims/v1/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"ims",
+								"v1",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a Product",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Product 1\",\n    \"upc\": \"1234567891012\",\n    \"price\": 110,\n    \"inventoryThreshold\": 1020\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/api/ims/v1/products/61904affcf49251d8aa2c1e2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"ims",
+								"v1",
+								"products",
+								"61904affcf49251d8aa2c1e2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FInd Product By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/ims/v1/products/619057f07c03e438e67f9d16",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"ims",
+								"v1",
+								"products",
+								"619057f07c03e438e67f9d16"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete A Product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/ims/v1/products/6190585a7c03e438e67f9d17",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"ims",
+								"v1",
+								"products",
+								"6190585a7c03e438e67f9d17"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Increase Product Inventory Count",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"storeId\": \"619060114c1dd84209d74a0a\",\n    \"count\": \"1200\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/api/ims/v1/products/619340226e1d380edf431c49/inventory-increase",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"ims",
+								"v1",
+								"products",
+								"619340226e1d380edf431c49",
+								"inventory-increase"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FInd Product By UPC",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/ims/v1/products/upc/1234567891012",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"ims",
+								"v1",
+								"products",
+								"upc",
+								"1234567891012"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Inventory Records of a product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/ims/v1/products/61904affcf49251d8aa2c1e2/inventory?size=10&page=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"ims",
+								"v1",
+								"products",
+								"61904affcf49251d8aa2c1e2",
+								"inventory"
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "Find orders by product upc",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/ims/v1/orders/product/1234567891014?size=10&page=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"ims",
+								"v1",
+								"orders",
+								"product",
+								"1234567891014"
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Orders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/ims/v1/orders?size=10&page=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"ims",
+								"v1",
+								"orders"
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all purchased items in an order",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/ims/v1/orders/61919b8a12d9c056ff5374d0/items",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"ims",
+								"v1",
+								"orders",
+								"61919b8a12d9c056ff5374d0",
+								"items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all payments in an order",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/ims/v1/orders/61919b8a12d9c056ff5374d0/payments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"ims",
+								"v1",
+								"orders",
+								"61919b8a12d9c056ff5374d0",
+								"payments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cashierId\": \"619036f7fa75924dfdd7d059\",\n    \"storeId\": \"619060114c1dd84209d74a0a\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/api/ims/v1/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"ims",
+								"v1",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FInd order by  ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/ims/v1/orders/61919b8a12d9c056ff5374d0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"ims",
+								"v1",
+								"orders",
+								"61919b8a12d9c056ff5374d0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add item to order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"upc\": \"1234567891013\",\n    \"quantity\": \"10\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/api/ims/v1/orders/619341116e1d380edf431c4d/items",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"ims",
+								"v1",
+								"orders",
+								"619341116e1d380edf431c4d",
+								"items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove item from order",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/api/ims/v1/orders/61919b8a12d9c056ff5374d0/items/619057f07c03e438e67f9d16",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"ims",
+								"v1",
+								"orders",
+								"61919b8a12d9c056ff5374d0",
+								"items",
+								"619057f07c03e438e67f9d16"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Confirm Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/api/ims/v1/orders/619341116e1d380edf431c4d/confirm",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"ims",
+								"v1",
+								"orders",
+								"619341116e1d380edf431c4d",
+								"confirm"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Payment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"paymentMethod\": \"DEBIT_CARD\",\n    \"amount\": \"2286.00\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/api/ims/v1/orders/619341116e1d380edf431c4d/payments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"ims",
+								"v1",
+								"orders",
+								"619341116e1d380edf431c4d",
+								"payments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Payment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/api/ims/v1/orders/61919b8a12d9c056ff5374d0/payments/DEBIT_CARD-2021-11-14T18-35-55-260000000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"ims",
+								"v1",
+								"orders",
+								"61919b8a12d9c056ff5374d0",
+								"payments",
+								"DEBIT_CARD-2021-11-14T18-35-55-260000000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Close Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/api/ims/v1/orders/619341116e1d380edf431c4d/close",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"ims",
+								"v1",
+								"orders",
+								"619341116e1d380edf431c4d",
+								"close"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancel Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/api/ims/v1/orders/619341116e1d380edf431c4d/cancel",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"ims",
+								"v1",
+								"orders",
+								"619341116e1d380edf431c4d",
+								"cancel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete A Orders",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/ims/v1/orders/61933e076e1d380edf431c43",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"ims",
+								"v1",
+								"orders",
+								"61933e076e1d380edf431c43"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Alerts",
+			"item": [
+				{
+					"name": "Get all alert",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/ims/v1/alerts?size=2&page=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"ims",
+								"v1",
+								"alerts"
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "2"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Kafka Failure",
+			"item": [
+				{
+					"name": "Get producer failure messages",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/ims/v1/kafka/producer-failure-messages?size=10&page=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"ims",
+								"v1",
+								"kafka",
+								"producer-failure-messages"
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get consumer failure messages",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/ims/v1/kafka/consumer-failure-messages?size=10&page=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"ims",
+								"v1",
+								"kafka",
+								"consumer-failure-messages"
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Report",
+			"item": [
+				{
+					"name": "Get sale report data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/ims/v1/reports/sales/data?date=2021-11-16",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"ims",
+								"v1",
+								"reports",
+								"sales",
+								"data"
+							],
+							"query": [
+								{
+									"key": "pid",
+									"value": "619057f07c03e438e67f9d16",
+									"description": "Optional. The product id. If provided only return data of this product",
+									"disabled": true
+								},
+								{
+									"key": "size",
+									"value": "10",
+									"description": "Optional, if not provided, use default 20",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "0",
+									"description": "Optional, if not provided, use default 0",
+									"disabled": true
+								},
+								{
+									"key": "hour",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "date",
+									"value": "2021-11-16"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Refunds",
+			"item": [
+				{
+					"name": "Get all refund records",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/ims/v1/refunds?size=10&page=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"ims",
+								"v1",
+								"refunds"
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

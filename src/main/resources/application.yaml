@@ -1,0 +1,43 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: inventory-management
+  data:
+    mongodb:
+      uri: mongodb+srv://inventory-user:TXs3ZsuIqT-pQFvwxOec@mongodb-svc.inventory-management.svc.cluster.local/inventory?ssl=false
+      #uri: mongodb+srv://inventory-user:k2QaoLbCddb0zPab@ttkien.e5hpg.mongodb.net/inventory?retryWrites=true&w=majority
+      auto-index-creation: true
+  security:
+    oauth2:
+      resource-server:
+        jwt:
+          jwk-set-uri: http://security-service//oauth2/jwt/jwks.json
+  kafka:
+    listener:
+      ack-mode: manual_immediate
+    client-id: ${spring.application.name}
+    bootstrap-servers:
+      - tb-kafka:9092
+    consumer:
+      enable-auto-commit: false
+      auto-offset-reset: latest
+    producer:
+      retries: 100
+      acks: 1
+      properties:
+        max.block.ms: 300000
+
+app:
+  config:
+    tax-percent: 0.13
+    kafka:
+      consumer-groups:
+        inventory-alert: ${spring.application.name}-inventory-alert
+        inventory-revert: ${spring.application.name}-inventory-revert
+        payment-refund: ${spring.application.name}-payment-refund
+        sales-report: ${spring.application.name}-sales-report
+      topics:
+        inventory: inventories
+        order: orders
+        consumer-failure: consumer-failures

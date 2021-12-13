@@ -1,0 +1,52 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ims-service
+  namespace: inventory-management
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ims-service
+  template:
+    metadata:
+      labels:
+        app: ims-service
+    spec:
+      containers:
+        - image: trungkientran84/ims:latest
+          name: ims
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8083
+              name: http
+          livenessProbe:
+            httpGet:
+              path: /actuator/health/liveness
+              port: http
+            initialDelaySeconds: 180
+          readinessProbe:
+            httpGet:
+              path: /actuator/health/readiness
+              port: http
+            initialDelaySeconds: 180
+            failureThreshold: 10
+      restartPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: ims-service
+  name: ims-service
+spec:
+  ports:
+    - name: 8080-8083
+      port: 8080
+      protocol: TCP
+      targetPort: 8083
+  selector:
+    app: ims-service
+  type: ClusterIP
+status:
+  loadBalancer: {}
